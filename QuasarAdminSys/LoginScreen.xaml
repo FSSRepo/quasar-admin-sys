@@ -1,0 +1,111 @@
+﻿<Window
+    x:Class="QuasarAdminSys.LoginScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:QuasarAdminSys"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="LoginScreen"
+    Width="600"
+    Height="480"
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    Loaded="onLoadedWindow"
+    ResizeMode="NoResize"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="InputIcon" TargetType="materialDesign:PackIcon">
+            <Setter Property="Width" Value="30" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
+    <materialDesign:DialogHost DialogTheme="Inherit" Identifier="RootDialog">
+        <Border Background="White" CornerRadius="15">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="345" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="110" />
+                    </Grid.RowDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="loginScreen.png" Stretch="UniformToFill" />
+                    </Grid.Background>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <materialDesign:PackIcon Kind="User" Style="{StaticResource InputIcon}" />
+                        <StackPanel Grid.Column="1">
+                            <TextBox
+                                x:Name="etToken"
+                                Margin="10,10"
+                                materialDesign:HintAssist.Hint="Token"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <materialDesign:PackIcon Kind="Password" Style="{StaticResource InputIcon}" />
+                        <StackPanel Grid.Column="1">
+                            <PasswordBox
+                                x:Name="etPassword"
+                                Margin="10,15"
+                                materialDesign:HintAssist.Hint="Contraseña"
+                                Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+                <Label
+                    Margin="5,3"
+                    Content="Quasar Admin System - Iniciar Sesion"
+                    FontFamily="Century Gothic"
+                    MouseDown="performDrag" />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Margin="7,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Fill="Red"
+                    MouseLeftButtonDown="CloseBtn" />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Margin="36,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Fill="Yellow"
+                    MouseLeftButtonDown="minimizeBtn" />
+            </Grid>
+
+        </Border>
+    </materialDesign:DialogHost>
+</Window>

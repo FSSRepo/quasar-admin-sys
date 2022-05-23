@@ -1,0 +1,27 @@
+﻿<Application
+    x:Class="QASServer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:QASServer"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#ff7700" />
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#333333" />
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#ff7700" />
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#FFF" />
+
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#015F92" />
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#FFF" />
+            <SolidColorBrush x:Key="SecondaryHueAccentBrush" Color="#689F38" />
+            <SolidColorBrush x:Key="SecondaryHueAccentForegroundBrush" Color="#FFF" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
